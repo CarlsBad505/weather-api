@@ -20,7 +20,9 @@ $primary-color: #337ab7;
 }
 
 .gif {
-  margin-top: -80px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  border: solid;
 }
 
 .search-history {
@@ -29,6 +31,11 @@ $primary-color: #337ab7;
 }
 
 .history-panel {
+  border: solid;
+  background-color: lightblue;
+}
+
+.search-panel {
   border: solid;
   background-color: lightblue;
 }
