@@ -1,0 +1,11 @@
+<div class="container">
+    <% if @response.class == Hash %>
+    <ul>
+      <% @response.each do |key, value| %>
+        <li><strong><%= key %></strong>: <%= value %></li>
+      <% end %>
+    </ul>
+    <% elsif @response.class == String %>
+      <p class="errors"><%= @response %></p>
+    <% end %>
+</div>

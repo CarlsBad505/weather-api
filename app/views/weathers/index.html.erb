@@ -1,18 +1,43 @@
 <div class="container">
-  <h1>City Weather</h1>
-  <p>Search for a city, anywhere in the world to find today's weather.</p>
-  <div class="row">
-    <%= form_for @weather do |f| %>
-    <div class="col-md-4">
-      <div class="form-group">
-        Search A City: <%= f.text_field :search_term %>
+  <div class="col-md-8">
+    <h1>Weather Genie</h1>
+    <p class="directions">Search for a city, anywhere in the world to find today's weather report!</p>
+    <p class="directions">Weather displayed is in Celcius</p>
+    <br />
+    <div class="row">
+      <%= form_for @weather, remote: true do |f| %>
+      <div class="col-md-4">
+        <div class="form-group">
+          <strong>Search A City: </strong><%= f.text_field :search_term, class: 'search' %>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <%= f.submit "Search", class: 'btn btn-primary btn-adjust' %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <section id="results">
+        <!-- this spot reserved for weather results partial rendering -->
+      </section>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <%= image_tag('weather.gif', class: "gif") %>
+    </div>
+    <div class="row panel-body history-panel">
+      <h4 class="search-history">Search History</h4>
+      <div id="begin-history">
+        <% @history.each do |record| %>
+          <p>The term <strong>"<%= record.search_term %>"</strong> has been searched <%= record.count %> times.</p>
+        <% end %>
+      </div>
+      <div id="updated-history">
+        <!-- this spot reserved for updated search history partial rendering-->
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="form-group">
-        <%= f.submit "Search", class: 'btn btn-primary' %>
-      </div>
-    </div>
-    <% end %>
   </div>
 </div>

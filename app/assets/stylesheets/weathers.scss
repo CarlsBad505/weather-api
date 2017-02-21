@@ -1,3 +1,34 @@
-// Place all the styles related to the weathers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$primary-color: #337ab7;
+
+.errors {
+  color: red;
+  font-weight: bold;
+}
+
+.directions {
+  font-size: medium;
+  color: $primary-color;
+}
+
+.search {
+  border-bottom-style: groove;
+  width: 100%;
+}
+
+.btn-adjust {
+  margin-top: 10px;
+}
+
+.gif {
+  margin-top: -80px;
+}
+
+.search-history {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.history-panel {
+  border: solid;
+  background-color: lightblue;
+}

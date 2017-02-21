@@ -1,0 +1,6 @@
+$partial = $('<%= j render 'weathers/results' %>');
+$history = $('<%= j render 'weathers/history' %>');
+
+$('#results').html($partial);
+$('#begin-history').hide();
+$('#updated-history').html($history);

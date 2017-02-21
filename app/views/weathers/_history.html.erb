@@ -1,0 +1,3 @@
+<% @history.each do |record| %>
+  <p>The term <strong>"<%= record.search_term %>"</strong> has been searched <%= record.count %> times.</p>
+<% end %>

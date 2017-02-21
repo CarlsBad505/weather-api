@@ -16,7 +16,7 @@ class Weather < ApplicationRecord
         return obj[:data], true
       end
     rescue
-      return "weathers.co api is currently down.", false
+      return "weathers.co api is currently down", false
     end
   end
 
